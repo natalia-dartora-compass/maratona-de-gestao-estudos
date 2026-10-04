@@ -1,0 +1,13 @@
+name: maratona-gestao
+services:
+  app:
+    build: .
+    user: "${LOCAL_UID:-1000}:${LOCAL_GID:-1000}"
+    ports:
+      - "127.0.0.1:3000:3000"
+    volumes:
+      - ./docs:/app/docs
+    environment:
+      NODE_ENV: production
+      DOCS_DIR: /app/docs
+    restart: unless-stopped

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Caderno de estudo da Maratona de Gestão: aulas, conceitos e aplicação prática.">
+  <title>Maratona de Gestão · Caderno de estudos</title>
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg">
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./vendor/marked.umd.js"></script>
+  <script defer src="./mode.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Pular para o conteúdo</a>
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="#dia-1"><span class="brand-icon">m.</span><span>maratona<span class="brand-sub">GESTÃO DE PROJETOS</span></span></a>
+    <div class="notebook"><span class="notebook-line">SEU CADERNO DE ESTUDOS</span><strong>Fundamentos <span>5 km</span></strong></div>
+    <label class="search-box"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="search" type="search" placeholder="Buscar no caderno" aria-label="Buscar páginas e conteúdo"><kbd>/</kbd></label>
+    <nav id="navigation" aria-label="Páginas de estudo"><p>Carregando páginas…</p></nav>
+    <div class="sidebar-bottom"><button id="new-page" class="sidebar-button"><span aria-hidden="true">＋</span> Nova página</button><p id="storage-label">Páginas salvas em Markdown</p></div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar"><button class="mobile-toggle" id="menu" aria-label="Abrir navegação" aria-expanded="false">☰</button><span class="breadcrumb">Caderno <span>/</span> <strong id="breadcrumb-section">Trilha de estudo</strong></span><span id="page-count" class="page-count"></span><button class="button compact" id="edit-page">Editar página</button></header>
+    <main id="main" tabindex="-1">
+      <div class="reading-layout"><article id="article"><p>Preparando seu caderno…</p></article><aside id="outline" aria-label="Nesta página"></aside></div>
+    </main>
+    <footer class="footer"><span>Maratona AI/R · percurso de 5 km</span><span id="footer-mode">Caderno local · edite e publique pelo Git.</span></footer>
+  </div>
+  <dialog id="editor" aria-labelledby="editor-heading">
+    <form id="editor-form">
+      <div class="dialog-header"><div><span class="eyebrow">CADERNO DE ESTUDOS</span><h2 id="editor-heading">Editar página</h2></div><button type="button" class="icon-button" id="close-editor" aria-label="Fechar editor">×</button></div>
+      <div class="editor-fields"><label>Título<input id="field-title" required maxlength="160"></label><label>Seção<input id="field-section" required maxlength="80" list="sections"></label><datalist id="sections"></datalist><label class="full">Resumo<input id="field-summary" maxlength="1000"></label><label class="full">Fonte<input id="field-source" maxlength="500" placeholder="Treinamento, referência ou anotação pessoal"></label></div>
+      <div class="editor-toolbar"><span>Conteúdo em Markdown</span><button type="button" id="toggle-preview" class="text-button">Ver prévia</button></div>
+      <textarea id="field-content" aria-label="Conteúdo em Markdown" maxlength="200000" spellcheck="true" placeholder="## Conceito&#10;&#10;Escreva sua explicação…"></textarea>
+      <div id="editor-preview" class="prose" hidden></div>
+      <p id="editor-error" class="error" role="alert" hidden></p>
+      <div class="dialog-footer"><button type="button" id="delete-page" class="danger-button">Excluir página</button><span id="editor-hint">Salva um arquivo na pasta docs/.</span><button type="button" id="cancel-editor" class="button">Cancelar</button><button type="submit" class="button primary" id="save-page">Salvar página</button></div>
+    </form>
+  </dialog>
+  <div id="toast" role="status" hidden></div>
+</body>
+</html>

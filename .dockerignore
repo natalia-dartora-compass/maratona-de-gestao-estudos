@@ -1,0 +1,7 @@
+data
+test
+node_modules
+github-pages
+.git
+*.zip
+.env

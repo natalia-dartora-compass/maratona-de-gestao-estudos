@@ -1,0 +1,17 @@
+import {mkdir,cp,writeFile,rm} from 'node:fs/promises';
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {readPages} from '../content-store.mjs';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const dataDir=path.resolve(process.env.DOCS_DIR || path.join(root,'docs'));
+const parsed=await readPages(dataDir);
+if(!parsed.pages.length) throw Error('Adicione pelo menos uma página em docs/.');
+const data=JSON.stringify(parsed,null,2);
+const out=path.join(root,'github-pages');
+await rm(out,{recursive:true,force:true});
+await mkdir(out,{recursive:true});
+await cp(path.join(root,'public'),out,{recursive:true});
+await writeFile(path.join(out,'data.json'),data);
+await writeFile(path.join(out,'mode.js'),'window.MARATONA_STATIC = true;\n');
+await writeFile(path.join(out,'.nojekyll'),'');
+console.log('Exportação de leitura criada em github-pages/. Publique o conteúdo dessa pasta.');

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" role="img" aria-labelledby="title desc">
+<title id="title">Quatro perguntas para entender um projeto</title><desc id="desc">Por que fazer: valor. Qual a finalidade: manter ou transformar. Como conduzir: escopo e contratação. Como avaliar: eficiência e benefícios.</desc>
+<rect width="800" height="450" rx="15" fill="#f6f8fd"/>
+<g font-family="Segoe UI, Arial, sans-serif">
+<text x="32" y="44" font-size="13" font-weight="700" letter-spacing="2" fill="#4561a9">QUATRO PERGUNTAS PARA ORIENTAR O TRABALHO</text>
+<g fill="#fff" stroke="#dce3f1"><rect x="30" y="71" width="354" height="162" rx="12"/><rect x="404" y="71" width="366" height="162" rx="12"/><rect x="30" y="253" width="354" height="162" rx="12"/><rect x="404" y="253" width="366" height="162" rx="12"/></g>
+<g fill="#e8efff"><rect x="48" y="89" width="34" height="30" rx="6"/><rect x="424" y="89" width="34" height="30" rx="6"/><rect x="48" y="271" width="34" height="30" rx="6"/><rect x="424" y="271" width="34" height="30" rx="6"/></g>
+<g fill="#345ad3" font-size="14" font-weight="700"><text x="56" y="110">01</text><text x="432" y="110">02</text><text x="56" y="292">03</text><text x="432" y="292">04</text></g>
+<g fill="#263555" font-size="19" font-weight="700"><text x="98" y="111">Por que fazer?</text><text x="474" y="111">Qual a finalidade?</text><text x="98" y="293">Como conduzir?</text><text x="474" y="293">Como avaliar?</text></g>
+<g fill="#5e6c85" font-size="16"><text x="50" y="153">Valor esperado para o negócio.</text><text x="50" y="181">Um projeto entrega uma mudança;</text><text x="50" y="206">programas coordenam benefícios.</text><text x="424" y="153">RTB: manter a operação.</text><text x="424" y="181">CTB: transformar o negócio.</text><text x="424" y="206">CAPEX / OPEX: classificação do gasto.</text><text x="50" y="335">Escopo: o que entra na entrega.</text><text x="50" y="363">Contrato: condições do compromisso.</text><text x="50" y="388">POC / MVP: aprender e validar.</text><text x="424" y="335">Eficiência: prazo, custo e qualidade.</text><text x="424" y="363">Resultados: adoção e benefícios.</text><text x="424" y="388">Sucesso considera os dois.</text></g>
+</g></svg>
